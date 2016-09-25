@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ErrorUnit.Injector_SimpleInjector</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>johngoldinc</authors>
+    <owners>johngoldinc</owners>
+    <projectUrl>https://github.com/JohnGoldInc/ErrorUnit.Injector_SimpleInjector</projectUrl>
+    <iconUrl>http://johngoldinc.com/img/ErrorUnitLargeLogo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This enables compatibility between ErrorUnit and SimpleInjector</description>
+    <releaseNotes>Version 1.0</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>di ioc ErrorUnit</tags>
+  </metadata>
+</package>
