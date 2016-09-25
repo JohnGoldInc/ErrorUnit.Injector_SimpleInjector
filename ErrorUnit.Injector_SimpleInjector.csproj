@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ErrorUnit.Interfaces, Version=1.0.0.38541, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ErrorUnit.Interface.1.0.0.38541\lib\net452\ErrorUnit.Interfaces.dll</HintPath>
+      <HintPath>packages\ErrorUnit.Interface.1.0.0.38541\lib\net452\ErrorUnit.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -42,7 +42,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="SimpleInjector, Version=3.2.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.3.2.2\lib\net45\SimpleInjector.dll</HintPath>
+      <HintPath>packages\SimpleInjector.3.2.2\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
