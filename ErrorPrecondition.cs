@@ -1,5 +1,6 @@
 ﻿using ErrorUnit.Injector_SimpleInjector.InterceptionExtensions;
 using ErrorUnit.Interfaces;
+using ErrorUnit.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

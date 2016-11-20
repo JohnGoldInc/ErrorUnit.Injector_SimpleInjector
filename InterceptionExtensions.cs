@@ -133,6 +133,9 @@ namespace ErrorUnit.Injector_SimpleInjector.InterceptionExtensions
                 select method)
                 .Single();
 
+
+
+
             public InterceptionHelper(Container container)
             {
                 this.Container = container;
@@ -241,7 +244,7 @@ namespace ErrorUnit.Injector_SimpleInjector.InterceptionExtensions
                 this.realInstance = realInstance;
                 this.interceptor = interceptor;
             }
-         
+
             public override IMessage Invoke(IMessage msg)
             {
                 if (msg is IMethodCallMessage)
@@ -250,13 +253,14 @@ namespace ErrorUnit.Injector_SimpleInjector.InterceptionExtensions
 
                     if (object.ReferenceEquals(message.MethodBase, GetTypeMethod))
                     {
-                        return this.Bypass(message, new ProxiedType(realInstance.GetType())); 
+                        return this.Bypass(message, new ProxiedType(realInstance.GetType()));
                     }
                     if (object.ReferenceEquals(message.MethodBase, ToStringMethod))
                     {
-                        return this.Bypass(message, ErrorUnitInjector.ErrorUnitCentral.Serialize(realInstance)); 
+                        return this.Bypass(message, ErrorUnitInjector.ErrorUnitCentral.Serialize(realInstance));
                     }
-                    else {
+                    else
+                    {
                         return this.InvokeMethodCall(message);
                     }
                 }
