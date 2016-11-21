@@ -74,10 +74,6 @@
     <Compile Include="ErrorUnitInjector.cs" />
     <Compile Include="InterceptionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ErrorPrecondition.cs" />
-    <Compile Include="ErrorUnitInterceptor.cs" />
-    <Compile Include="ProxiedType.cs" />
-    <Compile Include="ProxiedTypeSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

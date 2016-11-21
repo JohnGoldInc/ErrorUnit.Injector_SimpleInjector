@@ -1,5 +1,5 @@
 ﻿using ErrorUnit.Interfaces;
-using ErrorUnit.Injector_SimpleInjector.InterceptionExtensions;
+//using ErrorUnit.Injector_SimpleInjector.InterceptionExtensions;
 using SimpleInjector;
 
 namespace ErrorUnit.Injector_SimpleInjector
@@ -25,9 +25,9 @@ namespace ErrorUnit.Injector_SimpleInjector
         public C LinkInjector<C>(C ioc, IErrorUnitCentral errorUnitCentral)
         {
             container = ioc as Container;
-            container.InterceptWith<ErrorUnitInterceptor>(t => true);
+            container.InterceptWith<ErrorUnit.Models.ErrorUnitInterceptor>(t => t != typeof(ErrorUnit.Models.ErrorUnitInterceptor) );
             ErrorUnitInjector.ErrorUnitCentral = errorUnitCentral;
-            ErrorUnitInjector.ErrorUnitCentral.serializerSettings.Converters.Add(new ProxiedTypeSerializer());
+            //ErrorUnitInjector.ErrorUnitCentral.serializerSettings.Converters.Add(new ProxiedTypeSerializer());
             return ioc;
         }
     }
