@@ -25,7 +25,8 @@ namespace ErrorUnit.Injector_SimpleInjector
         public C LinkInjector<C>(C ioc, IErrorUnitCentral errorUnitCentral)
         {
             container = ioc as Container;
-            container.InterceptWith<ErrorUnit.Models.ErrorUnitInterceptor>(t => t != typeof(ErrorUnit.Models.ErrorUnitInterceptor) );
+            //container.InterceptWith<ErrorUnit.Models.ErrorUnitInterceptor>(t => t != typeof(ErrorUnit.Models.ErrorUnitInterceptor) );
+            container.InterceptWithErrorUnit();
             ErrorUnitInjector.ErrorUnitCentral = errorUnitCentral;
             //ErrorUnitInjector.ErrorUnitCentral.serializerSettings.Converters.Add(new ProxiedTypeSerializer());
             return ioc;
