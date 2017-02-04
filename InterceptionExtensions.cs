@@ -31,17 +31,17 @@ public static class InterceptorExtensions
         };
     }
 
-    private static readonly Func<object, object> createErrorUnitProxy =
-        (o) => typeof(ErrorUnit.ErrorUnitCentral).GetMethod("Wrap")
-                                                 .MakeGenericMethod(o.GetType())
-                                                 .Invoke(null, new object[] { o });
-
     public static void InterceptWithErrorUnit(this Container c)
     {
         c.ExpressionBuilt += (s, e) =>
         {
             e.Expression = Expression.Convert(
-                    Expression.Invoke(Expression.Constant(createErrorUnitProxy),
+                    Expression.Invoke(Expression.Constant((Func<object, object>)(
+                                                    (o) => typeof(ErrorUnit.ErrorUnitCentral)
+                                                            .GetMethod("Wrap")
+                                                            .MakeGenericMethod(e.RegisteredServiceType)
+                                                            .Invoke(null, new object[] { o })
+                                                 )),
                         e.Expression),
                     e.RegisteredServiceType);
 
